@@ -43,7 +43,7 @@ you should not need to re-authenticate on futher runs.
 
 ## Known issues
 
-[See open bug reports in the issue queue.](https://github.com/NickWilde1990/drupal-spec-tool-commands/issues)
+[See open bug reports in the issue queue.](https://github.com/AlexBaron77/drupal-spec-tool-commands/issues)
 
 ## Contribution
 

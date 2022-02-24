@@ -1,9 +1,9 @@
 <?php
 
-namespace NickWilde1990\DrupalSpecToolCommands\Command;
+namespace AlexBaron77\DrupalSpecToolCommands\Command;
 
 use Composer\Command\BaseCommand;
-use NickWilde1990\DrupalSpecToolCommands\GoogleSpreadsheetAccessTrait;
+use AlexBaron77\DrupalSpecToolCommands\GoogleSpreadsheetAccessTrait;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;

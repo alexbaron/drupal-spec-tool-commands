@@ -1,6 +1,6 @@
 <?php
 
-namespace NickWilde1990\DrupalSpecToolCommands;
+namespace AlexBaron77\DrupalSpecToolCommands;
 
 use Composer\IO\IOInterface;
 

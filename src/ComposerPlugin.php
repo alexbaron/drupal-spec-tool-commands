@@ -6,7 +6,7 @@
  * Time: 16:55
  */
 
-namespace NickWilde1990\DrupalSpecToolCommands;
+namespace AlexBaron77\DrupalSpecToolCommands;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
@@ -30,7 +30,7 @@ class ComposerPlugin implements PluginInterface, Capable
   public function getCapabilities()
   {
     return [
-      'Composer\Plugin\Capability\CommandProvider' => 'NickWilde1990\DrupalSpecToolCommands\Command\DrupalSpecCommands',
+      'Composer\Plugin\Capability\CommandProvider' => 'AlexBaron77\DrupalSpecToolCommands\Command\DrupalSpecCommands',
     ];
   }
 }

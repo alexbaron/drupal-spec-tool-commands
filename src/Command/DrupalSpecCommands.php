@@ -1,6 +1,6 @@
 <?php
 
-namespace NickWilde1990\DrupalSpecToolCommands\Command;
+namespace AlexBaron77\DrupalSpecToolCommands\Command;
 
 use Composer\Plugin\Capability\CommandProvider;
 

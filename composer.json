@@ -1,25 +1,25 @@
 {
-    "name": "nickwilde1990/drupal-spec-tool-commands",
+    "name": "alexbaron77/drupal-spec-tool-commands",
     "description": "Provides composer commands for automating usage of acquia/drupal-spec-tool",
     "type": "composer-plugin",
     "require": {
         "google/apiclient": "^2.0",
-        "composer-plugin-api": "^1.1"
+        "composer-plugin-api": "^2.1"
     },
     "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "Nick Wilde",
-            "email": "nick@briarmoon.ca"
+            "name": "Alexandre Baron",
+            "email": "alexbaron77@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "NickWilde1990\\DrupalSpecToolCommands\\": "src/"
+            "AlexBaron77\\DrupalSpecToolCommands\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "extra": {
-        "class": "NickWilde1990\\DrupalSpecToolCommands\\ComposerPlugin"
+        "class": "AlexBaron77\\DrupalSpecToolCommands\\ComposerPlugin"
     }
 }
