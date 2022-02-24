@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nick
- * Date: 2018-08-19
- * Time: 16:55
- */
 
 namespace AlexBaron77\DrupalSpecToolCommands;
 
@@ -13,24 +7,44 @@ use Composer\IO\IOInterface;
 use Composer\Plugin\Capable;
 use Composer\Plugin\PluginInterface;
 
-class ComposerPlugin implements PluginInterface, Capable
-{
+/**
+ *
+ */
+class ComposerPlugin implements PluginInterface, Capable {
 
+  protected $composer;
+  protected $io;
 
   /**
-   * Apply plugin modifications to Composer
+   * Apply plugin modifications to Composer.
    *
-   * @param Composer $composer
-   * @param IOInterface $io
+   * @param \Composer\Composer $composer
+   * @param \Composer\IO\IOInterface $io
    */
-  public function activate(Composer $composer, IOInterface $io)
-  {
+  public function activate(Composer $composer, IOInterface $io) {
+    $this->composer = $composer;
+    $this->io = $io;
   }
 
-  public function getCapabilities()
-  {
+  /**
+   *
+   */
+  public function deactivate(Composer $composer, IOInterface $io) {
+  }
+
+  /**
+   *
+   */
+  public function uninstall(Composer $composer, IOInterface $io) {
+  }
+
+  /**
+   *
+   */
+  public function getCapabilities() {
     return [
       'Composer\Plugin\Capability\CommandProvider' => 'AlexBaron77\DrupalSpecToolCommands\Command\DrupalSpecCommands',
     ];
   }
+
 }

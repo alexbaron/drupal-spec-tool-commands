@@ -8,17 +8,25 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 
+/**
+ *
+ */
 class DrupalSpecGherkinDumper extends BaseCommand {
   use GoogleSpreadsheetAccessTrait;
 
-  public function configure()
-  {
+  /**
+   *
+   */
+  public function configure() {
     $this->setName('drupal-spec-dump-gherkin');
     $this->setAliases(['drupal-dg']);
   }
 
+  /**
+   *
+   */
   public function execute(InputInterface $input, OutputInterface $output) {
-    include_once('vendor/autoload.php');
+    include_once 'vendor/autoload.php';
     $package = $this->getComposer()->getPackage();
     $name = $package->getName();
     $extra = $package->getExtra();
@@ -35,7 +43,7 @@ class DrupalSpecGherkinDumper extends BaseCommand {
       $config['feature-path'] = 'tests/features';
     }
     if (!is_dir($config['feature-path'])) {
-      mkdir($config['feature-path'], 0777, true);
+      mkdir($config['feature-path'], 0777, TRUE);
     }
     if (!isset($config['credentials-path'])) {
       throw new \InvalidArgumentException("drupal-spec-dump-gherkin command requires extra.drupal-spec-tool.credentials-path key to be set.");
@@ -56,6 +64,6 @@ class DrupalSpecGherkinDumper extends BaseCommand {
     }
     $io->write("Updated all Drupal Spec Features");
 
-
   }
+
 }

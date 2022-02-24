@@ -6,6 +6,9 @@
         "google/apiclient": "^2.0",
         "composer-plugin-api": "^2.1"
     },
+    "require-dev": {
+        "composer/composer": "^2.0"
+    },
     "license": "GPL-3.0-or-later",
     "authors": [
         {

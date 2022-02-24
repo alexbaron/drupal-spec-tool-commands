@@ -4,7 +4,10 @@ namespace AlexBaron77\DrupalSpecToolCommands;
 
 use Composer\IO\IOInterface;
 
-trait GoogleSpreadsheetAccessTrait  {
+/**
+ *
+ */
+trait GoogleSpreadsheetAccessTrait {
 
   /**
    * Returns an authorized API client.
@@ -13,7 +16,7 @@ trait GoogleSpreadsheetAccessTrait  {
    *   The name of the app.
    * @param string $credentials_path
    *   The path to check/store credentials.
-   * @param IOInterface $io
+   * @param \Composer\IO\IOInterface $io
    *   The IOInterface to interact with the user.
    *
    * @return \Google_Client the authorized client object
@@ -21,7 +24,7 @@ trait GoogleSpreadsheetAccessTrait  {
    * @throws \Google_Exception
    * @throws \Exception
    */
-  function getClient($name, $credentials_path, IOInterface $io) {
+  public function getClient($name, $credentials_path, IOInterface $io) {
     $client = new \Google_Client();
     $client->setApplicationName($name);
     $client->setScopes(\Google_Service_Sheets::SPREADSHEETS_READONLY);
@@ -65,12 +68,12 @@ trait GoogleSpreadsheetAccessTrait  {
 
   /**
    * @param \Google_Client $client
-   *   An authorized API client
+   *   An authorized API client.
    * @param string $spreadsheet
-   *   The ID of the spreasheet
+   *   The ID of the spreasheet.
    * @param string $range
-   *   The location to get data from [Sheet Name]![TopLeftCell]:[BottomRightCell]
-
+   *   The location to get data from [Sheet Name]![TopLeftCell]:[BottomRightCell].
+   *
    * @return array
    *   An multi-level array of retrieved values keyed by row and then column.
    *   0 indexed and the rows/columns start at 0 based on the *range* not the
@@ -82,4 +85,5 @@ trait GoogleSpreadsheetAccessTrait  {
     $values = $response->getValues();
     return $values;
   }
+
 }
